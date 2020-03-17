@@ -1,1 +1,106 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --light: #eff6e6;
+  --dark: #271b33;
+
+  --primary: #e2aa81;
+  --secondary: #999999;
+  --success: #79ae5f;
+  --warning: #f69d27;
+  --danger: #f44336;
+  --info: #271b33;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  color: var(--dark);
+  width: 500px;
+  background-color: var(--light);
+  font-size: 2rem;
+  font-family: "Liberation Mono", monospace;
+}
+
+.title {
+  margin: 2rem 0;
+}
+
+.button {
+  font-family: inherit;
+  font-weight: bold;
+  border: 3px solid black;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.form {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__label {
+  width: 100%;
+}
+
+.form__input {
+  font-family: inherit;
+  border: 3px solid var(--dark);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  flex-grow: 1;
+  outline: none;
+}
+
+.button--secondary {
+  background-color: var(--secondary);
+}
+
+.button--secondary:hover {
+  color: white;
+  background-color: #696969;
+}
+
+.button--success {
+  background-color: darkseagreen;
+}
+
+.button--success:hover {
+  color: white;
+  background-color: #506a50;
+}
+
+.button--warning {
+  background-color: var(--warning);
+}
+
+.button--warning:hover {
+  color: white;
+  background-color: #c47d1f;
+}
+
+.button--danger {
+  background-color: var(--danger);
+}
+
+.button--danger:hover {
+  color: white;
+  background-color: #b63228;
+}

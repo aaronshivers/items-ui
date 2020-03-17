@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../auth/auth.guard';
+import { ItemsHomeComponent } from './items-home/items-home.component';
 
 
-const routes: Routes = [];
+const itemsRoutes: Routes = [
+  { path: '', component: ItemsHomeComponent, canActivate: [ AuthGuard ] },
+];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  imports: [ RouterModule.forChild(itemsRoutes) ],
+  exports: [ RouterModule ],
 })
-export class ItemsRoutingModule { }
+export class ItemsRoutingModule {
+}

@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { HeadingComponent } from './heading/heading.component';
 
 
-
 @NgModule({
-  declarations: [HeadingComponent],
+  declarations: [ HeadingComponent ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+  ],
+  exports: [ HeadingComponent ],
 })
-export class SharedModule { }
+export class SharedModule {
+}

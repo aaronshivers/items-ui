@@ -1,1 +1,9 @@
-<p>item-form works!</p>
+<form class="form" #itemForm="ngForm" (ngSubmit)="onAddItem()">
+  <input
+    class="form__input"
+    name="text"
+    ngModel
+    type="text"
+    placeholder="New Item...">
+  <button class="button button--success">ADD ITEM</button>
+</form>
