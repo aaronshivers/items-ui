@@ -22,7 +22,7 @@ export class LoginComponent {
     });
   }
 
-  private onLogin(): void {
+  onLogin(): void {
     const email = this.userForm.value.email;
     const password = this.userForm.value.password;
     console.log(email, password);
