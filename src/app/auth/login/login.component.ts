@@ -25,7 +25,6 @@ export class LoginComponent {
   onLogin(): void {
     const email = this.userForm.value.email;
     const password = this.userForm.value.password;
-    console.log(email, password);
 
     this.authService.login({ email, password })
       .subscribe(() => this.router.navigateByUrl('/items'));

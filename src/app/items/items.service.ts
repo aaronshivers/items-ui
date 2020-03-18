@@ -8,7 +8,7 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class ItemService {
-  itemsUrl = 'http://localhost:3000/notes/';
+  itemsUrl = 'https://items-api-aaron.herokuapp.com/notes/';
   itemsChanged = new Subject<Item[]>();
   private items: Item[] = [];
 

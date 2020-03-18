@@ -11,7 +11,7 @@ import { Moment } from 'moment';
   providedIn: 'root',
 })
 export class AuthService {
-  authUrl = 'http://localhost:3000/users';
+  authUrl = 'https://items-api-aaron.herokuapp.com/users';
 
   constructor(
     private http: HttpClient,
