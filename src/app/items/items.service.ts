@@ -56,7 +56,11 @@ export class ItemService {
   private fetchItems(): Observable<Item[]> {
     return this.http.get(this.itemsUrl).pipe(
       map((items: Item[]) => items),
-      tap(items => this.setItems(items)),
+      tap(items => {
+        if (items.length > 0) {
+          this.setItems(items);
+        }
+      }),
     );
   }
 
