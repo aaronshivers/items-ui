@@ -22,9 +22,10 @@ export class AuthService {
     return moment().isBefore(this.getExpiration());
   }
 
-  isLoggedOut(): boolean {
-    return !this.isLoggedIn();
-  }
+  // TODO: maybe remove this
+  // isLoggedOut(): boolean {
+  //   return !this.isLoggedIn();
+  // }
 
   login(user: User): Observable<{}> {
     return this.http.post<User>(this.authUrl, user).pipe(
@@ -52,10 +53,11 @@ export class AuthService {
     localStorage.setItem('expires_at', JSON.stringify(expiresAt.valueOf()));
   }
 
-  signup(user: User): Observable<{}> {
-    return this.http.post<User>(this.authUrl + 'login', user).pipe(
-      tap(response => this.setSession(response)),
-      shareReplay(),
-    );
-  }
+  // TODO: maybe remove this
+  // signup(user: User): Observable<{}> {
+  //   return this.http.post<User>(this.authUrl + 'login', user).pipe(
+  //     tap(response => this.setSession(response)),
+  //     shareReplay(),
+  //   );
+  // }
 }
